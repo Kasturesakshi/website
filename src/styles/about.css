@@ -1,0 +1,244 @@
+.about-container {
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 40px;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-out;
+    transition: transform 0.3s ease;
+  }
+  
+  .about-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+  }
+  
+  .about-container h2 {
+    font-size: 2.5rem;
+    color: #004466;
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 10px;
+    animation: slideIn 0.8s ease-in-out;
+  }
+  
+  .about-container h2::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 60px;
+    height: 4px;
+    background-color: #00bfa6;
+    border-radius: 2px;
+  }
+  
+  .about-container p {
+    line-height: 1.8;
+    font-size: 1.05rem;
+    color: #333;
+    text-align: justify;
+    animation: fadeText 1.5s ease-in-out;
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes slideIn {
+    0% {
+      opacity: 0;
+      transform: translateX(-30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes fadeText {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+
+  .staff-section {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #f0f8ff;
+    border-radius: 15px;
+    animation: fadeIn 1.5s ease-in;
+  }
+  
+  .staff-section h2 {
+    color: #004466;
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    animation: slideIn 1s ease;
+  }
+  
+  .card-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+  
+  .profile-card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    text-align: center;
+    width: 200px;
+    padding: 15px;
+    animation: zoomIn 0.8s ease-in-out;
+  }
+  
+  .profile-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+  }
+  
+  .profile-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .profile-card h3 {
+    margin: 0;
+    color: #333;
+    font-family: 'Georgia', serif;
+  }
+  
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 0.5s ease;
+    z-index: 1000;
+  }
+  
+  .modal-content {
+    background: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+    position: relative;
+    animation: scaleUp 0.5s ease;
+  }
+  
+  .modal-content img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .modal-content h2 {
+    margin-bottom: 10px;
+    color: #004466;
+  }
+  
+  .modal-content p {
+    color: #333;
+    font-size: 1.05rem;
+    line-height: 1.6;
+  }
+  
+  .close-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 1.8rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #aaa;
+    transition: color 0.3s;
+  }
+  
+  .close-btn:hover {
+    color: #e74c3c;
+  }
+  
+  /* Animations */
+  @keyframes zoomIn {
+    0% {
+      transform: scale(0.7);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes scaleUp {
+    0% {
+      transform: scale(0.6);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
+
+
+  .modal-text-box {
+    background-color: #f5f5f5; /* Light gray background */
+    padding: 20px;
+    border-radius: 10px;
+    color: #222; /* Darker text for better visibility */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    height: 250px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    animation: popUpBox 0.6s ease;
+    margin-left: 1px;
+
+  }
+  
+  @keyframes popUpBox {
+    0% {
+      opacity: 0;
+      transform: scale(0.7);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  

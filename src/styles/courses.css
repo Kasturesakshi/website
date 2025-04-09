@@ -1,0 +1,112 @@
+/* Container styling */
+.courses-container {
+    padding: 60px 20px;
+    background: linear-gradient(to right, #f4f9ff, #ecf3ff);
+    min-height: 100vh;
+    text-align: center;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  /* Title styling */
+  .courses-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 50px;
+    animation: fadeInDown 1s ease;
+  }
+  
+  /* Card container layout */
+  .card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+  }
+  
+  /* Individual course card styling */
+  .course-card {
+    background: linear-gradient(to top right, #ffffff, #f0f7ff);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    width: 320px;
+    padding: 30px 25px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    animation: floatIn 1s ease forwards;
+    border: 1px solid #e1ecf4;
+  }
+  
+  .course-card:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 14px 35px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Gradient ripple animation on hover */
+  .course-card::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, #d0eaff 0%, transparent 70%);
+    opacity: 0;
+    transition: opacity 0.6s;
+    z-index: 0;
+  }
+  
+  .course-card:hover::before {
+    opacity: 1;
+  }
+  
+  /* Text content styling */
+  .course-card strong {
+    font-size: 1.4rem;
+    color: #1e3d59;
+    display: block;
+    margin-bottom: 15px;
+    z-index: 1;
+    position: relative;
+  }
+  
+  .course-card p {
+    font-size: 1rem;
+    color: #4b4b4b;
+    line-height: 1.6;
+    z-index: 1;
+    position: relative;
+  }
+  
+  /* Animations */
+  @keyframes fadeInDown {
+    0% {
+      opacity: 0;
+      transform: translateY(-40px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes floatIn {
+    0% {
+      opacity: 0;
+      transform: scale(0.9) translateY(30px);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1) translateY(0);
+    }
+  }
+  
+  /* Responsive tweaks */
+  @media (max-width: 768px) {
+    .course-card {
+      width: 90%;
+    }
+  }
+  

@@ -1,0 +1,82 @@
+.students-container {
+    padding: 30px;
+    background: linear-gradient(to right, #f7f8fc, #e0eafc);
+    font-family: 'Segoe UI', sans-serif;
+    text-align: center;
+  }
+  
+  .title {
+    font-size: 2.2rem;
+    color: #2c3e50;
+    margin-bottom: 10px;
+    animation: fadeInDown 0.8s ease;
+  }
+  
+  .subtitle {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 30px;
+  }
+  
+  .card-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .course-card {
+    background-color: white;
+    border-radius: 15px;
+    padding: 20px 30px;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .course-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  .course-card.active {
+    border: 2px solid #3498db;
+    background-color: #ecf9ff;
+  }
+  
+  .content-card {
+    margin-top: 30px;
+    padding: 25px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+    animation: slideUp 0.6s ease-in-out;
+  }
+  
+  h4 {
+    color: #2c3e50;
+    margin-top: 15px;
+  }
+  
+  @keyframes slideUp {
+    from {
+      transform: translateY(30px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fadeInDown {
+    from {
+      transform: translateY(-30px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  

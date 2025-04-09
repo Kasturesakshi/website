@@ -1,0 +1,74 @@
+.news-container {
+    padding: 50px 20px;
+    background: linear-gradient(to right, #eef5ff, #f8fbff);
+    font-family: 'Segoe UI', sans-serif;
+    text-align: center;
+    animation: fadeSlideIn 1.2s ease forwards;
+    min-height: 60vh;
+  }
+  
+  .news-title {
+    font-size: 2.2rem;
+    color: #2c3e50;
+    margin-bottom: 30px;
+    animation: pulseGlow 2s infinite ease-in-out;
+  }
+  
+  .news-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    max-width: 600px;
+  }
+  
+  .news-item {
+    background: #ffffff;
+    margin: 15px 0;
+    padding: 18px 25px;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    color: #333;
+    position: relative;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    transform: translateY(40px);
+    opacity: 0;
+    animation: slideUpFade 1s forwards;
+    animation-delay: calc(var(--i) * 0.3s);
+  }
+  
+  /* Set delay manually for each item */
+  .news-item:nth-child(1) { --i: 1; }
+  .news-item:nth-child(2) { --i: 2; }
+  
+  /* Entrance animation */
+  @keyframes slideUpFade {
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  /* Container entrance */
+  @keyframes fadeSlideIn {
+    from {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Title animation */
+  @keyframes pulseGlow {
+    0%, 100% {
+      text-shadow: 0 0 10px #aecbff;
+    }
+    50% {
+      text-shadow: 0 0 20px #87bfff;
+    }
+
+    
+  }
+   

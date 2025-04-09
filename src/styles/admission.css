@@ -1,0 +1,96 @@
+.admissions-container {
+    padding: 2rem;
+    background: linear-gradient(to bottom, #f0f4ff, #ffffff);
+    border-radius: 20px;
+    animation: fadeInUp 1.5s ease-out;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .admissions-heading {
+    font-size: 2.5rem;
+    color: #0b3d91;
+    text-align: center;
+    margin-bottom: 1rem;
+    animation: bounce 2s infinite alternate;
+  }
+  
+  .admission-open-text {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: #222;
+    font-weight: 500;
+  }
+  
+  .admission-section {
+    background-color: #ffffff;
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    border-left: 5px solid #0b3d91;
+    border-radius: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: slideUp 1s ease-in-out;
+  }
+  
+  .admission-section:hover {
+    transform: scale(1.02);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
+  }
+  
+  .admission-section h3 {
+    color: #0b3d91;
+    margin-bottom: 0.75rem;
+  }
+  
+  .admission-section p {
+    margin: 0.3rem 0;
+    font-weight: 500;
+  }
+  
+  .admission-section ul {
+    padding-left: 1.2rem;
+  }
+  
+  .admission-section ul li {
+    list-style: disc;
+    margin: 0.5rem 0;
+    color: #444;
+    line-height: 1.5;
+  }
+  
+  /* Animations */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(40px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes bounce {
+    0% {
+      transform: translateY(0px);
+    }
+    100% {
+      transform: translateY(-10px);
+    }
+  }
+  
+  @keyframes slideUp {
+    from {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+
+
+
+  
